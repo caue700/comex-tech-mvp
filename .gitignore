@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local files
+.DS_Store
+Thumbs.db
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Outputs and scratch folders
+work/
+outputs/
