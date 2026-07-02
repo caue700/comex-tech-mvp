@@ -37,7 +37,7 @@ Demonstrar a viabilidade de um painel de monitoramento integrado para processos 
 
 ## 🖼️ Demonstração Visual
 
-> Placeholder: inserir futuramente print ou GIF do dashboard rodando localmente.
+![Dashboard principal](docs/images/dashboard-principal.png)
 
 ---
 
