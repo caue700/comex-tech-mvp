@@ -151,6 +151,14 @@ else:
         },
     )
 
+    csv_exportacao = tabela.to_csv(index=False, sep=";", encoding="utf-8-sig").encode("utf-8-sig")
+    st.download_button(
+        label="⬇️ Exportar relatório filtrado (.csv)",
+        data=csv_exportacao,
+        file_name="relatorio_processos_filtrados.csv",
+        mime="text/csv",
+    )
+
 st.divider()
 st.caption(
     "Uso restrito a apresentação acadêmica. "
