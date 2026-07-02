@@ -3,6 +3,8 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+from src.calculations import calcular_cif_dataframe_estimado
+from src.utils import formatar_moeda_brl, formatar_moeda_usd
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_PATH = BASE_DIR / "data" / "mock" / "processos_mock.csv"
@@ -17,22 +19,8 @@ st.set_page_config(
 @st.cache_data
 def carregar_processos() -> pd.DataFrame:
     dados = pd.read_csv(DATA_PATH, parse_dates=["eta_santos", "data_prevista_desembaraco"])
-    dados["valor_cif_usd_estimado"] = (
-        dados["valor_fob_usd_estimado"]
-        + dados["frete_usd_estimado"]
-        + dados["seguro_usd_estimado"]
-    )
+    dados = calcular_cif_dataframe_estimado(dados)
     return dados
-
-
-def formatar_moeda_usd(valor: float) -> str:
-    texto = f"{valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
-    return f"US$ {texto}"
-
-
-def formatar_moeda_brl(valor: float) -> str:
-    texto = f"{valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
-    return f"R$ {texto}"
 
 
 processos = carregar_processos()
