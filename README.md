@@ -1,5 +1,11 @@
 # 🚢 Comex Tech MVP - Dashboard de Controle de Importação Marítima
 
+![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=flat-square&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.45%2B-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2.2%2B-150458?style=flat-square&logo=pandas&logoColor=white)
+![Tests](https://img.shields.io/badge/Tests-Passing-2ea44f?style=flat-square&logo=github-actions&logoColor=white)
+![Scope](https://img.shields.io/badge/Escopo-Acadêmico-orange?style=flat-square)
+
 Este é um protótipo de dashboard de dados analíticos para acompanhamento e controle simulado de processos de importação marítima com destino ao Porto de Santos/SP. O projeto une conceitos teóricos de **Comércio Exterior** com **Engenharia de Software** e **Visualização de Dados**.
 
 ---
